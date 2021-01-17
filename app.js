@@ -38,7 +38,7 @@ const reviews = [
   },
 ];
 
-//select items 
+//select items
 const img = document.getElementById("person-img");
 const author = document.getElementById("author");
 const job = document.getElementById("job");
@@ -52,7 +52,37 @@ const randomBtn = document.querySelector(".random-btn");
 let currentItem = 0;
 
 //load initial item
-window.addEventListener("DOMContentLoaded", function (){
+
+window.addEventListener("DOMContentLoaded", function () {
+  showPerson();
+});
+
+//addEventlistener ile sürekli aynı initi yazmak zorundaydık
+//show person based on item
+
+function showPerson() {
   const item = reviews[currentItem];
-  img.src= item.img;
+  img.src = item.img;
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+}
+console.log(reviews.length);
+//show next person
+nextBtn.addEventListener("click", () => {
+  currentItem++;
+  if (currentItem > reviews.length - 1) {
+    currentItem = 0;
+  }
+
+  showPerson();
+});
+
+prevBtn.addEventListener("click", () => {
+  currentItem--;
+  if (currentItem < 0) {
+    currentItem = reviews.length - 1;
+  }
+
+  showPerson();
 });
