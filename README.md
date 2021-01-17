@@ -7,7 +7,7 @@
 ## I've learned:
 - accessing functions.
 - previous and next buttons.
-- creating data and show it in HTML
+- creating data and show it in HTML.
 
 ## I've added:
 
