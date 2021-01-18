@@ -1,3 +1,6 @@
+const API_KEY = "514ee790-5991-11eb-889c-955d3325a54c"
+const REVIEW_API = `https://app.reviewapi.io/api/v1/reviews?apikey=${API_KEY}&url=https%3A%2F%2Fwww.capterra.com%2Fp%2F140650%2FRecruitee&amount=15`
+
 // local reviews data
 const reviews = [
   {
@@ -37,7 +40,6 @@ const reviews = [
       "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
   },
 ];
-
 //select items
 const img = document.getElementById("person-img");
 const author = document.getElementById("author");
